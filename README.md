@@ -52,12 +52,12 @@ ps_audit_elk
 ###Start a container using the image we built
 
 ```shell
-  docker run
-  -d
-  --name docker_audit
-  -v $PWD/locallogs/sample_audit.log:/var/log/mysql/audit.log
-  -v $PWD/config/logstash.conf:/etc/logstash/conf.d/logstash.conf
-  -p 5601:5601
+  docker run \
+  -d \
+  --name docker_audit \
+  -v $PWD/locallogs/sample_audit.log:/var/log/mysql/audit.log \
+  -v $PWD/config/logstash.conf:/etc/logstash/conf.d/logstash.conf \
+  -p 5601:5601 \
   mysqlboy/ps_audit_elk
 ```
 
