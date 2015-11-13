@@ -12,7 +12,9 @@
 
 ###Clone this repo
 
-```git clone git@github.com:mysqlboy/ps_audit_elk.git```
+```shell
+  git clone git@github.com:mysqlboy/ps_audit_elk.git
+```
 
 ###Build the Docker image
 
@@ -21,7 +23,7 @@
 ```
 
 ```shell
-  docker build -t mysqlboy/ps_audit_elk
+  docker build -t mysqlboy/ps_audit_elk .
 ```
 
 ###Start a container using the image we built
