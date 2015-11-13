@@ -9,7 +9,7 @@
   [Mac guide here](http://docs.docker.com/v1.8/installation/mac/)  
   [Win guide here](http://docs.docker.com/v1.8/installation/windows/)  
 
-2. You have generated a JSON based audit log file using Percona's Audit Plugin (Percona Server for MySQL 5.5/5.6 required).
+2. You have generated a JSON based audit log file using Percona's Audit Plugin (Percona Server for MySQL 5.5/5.6 required).  
   [Percona Audit Plugin](https://www.percona.com/blog/2015/09/10/percona-server-audit-log-plugin-best-practices/)
 
 ```ini
