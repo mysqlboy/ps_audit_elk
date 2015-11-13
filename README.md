@@ -67,6 +67,6 @@ with `-v` we are mapping files into the container into defined paths. To use you
 
 When we bring up the container we are mapping the local port to the docker port inside the container. So we can point our browser at localhost.
 
-```browser
+```plain
   http://127.0.0.1:5601
 ```
