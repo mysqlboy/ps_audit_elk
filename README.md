@@ -11,6 +11,14 @@
 2. You have generated a JSON based audit log file using Percona's Audit Plugin (Percona Server for MySQL 5.5/5.6 required).
   [Percona Audit Plugin](https://www.percona.com/blog/2015/09/10/percona-server-audit-log-plugin-best-practices/)
 
+  Here's a line for us to start with.
+
+  This line is separated from the one above by two newlines, so it will be a *separate paragraph*.
+
+  This line is also a separate paragraph, but...
+  This line is only separated by a single newline, so it's a separate line in the *same paragraph*.
+
+
 ```ini
   [mysqld]
   AUDIT_LOG_FORMAT=JSON
