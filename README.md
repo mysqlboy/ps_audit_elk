@@ -12,6 +12,18 @@
   AUDIT_LOG_FORMAT=JSON
   AUDIT_LOG_HANDLER=FILE
 ```
+```shell
+ps_audit_elk
+├── locallogs
+├── config
+|   ├── export.json      <-- kibana-4 export
+|   ├── kibana.yml       <-- kibana-4 yaml config
+|   ├── logstash.conf    <-- logstash config file
+|   ├── logstash.list    <-- sources list for logstash repo
+|   └── setup.sh         <-- shell script to launch all services
+├── Dockerfile           <-- Dockerfile to build image
+├── README.md
+```
 
 ###Clone this repo
 
