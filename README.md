@@ -6,9 +6,12 @@
 ###Prerequisites
 1. This guide assumes that you have docker or docker machine installed. Out of scope.
 2. You have generated a JSON based audit log file using Percona's Audit Plugin
-.. [mysqld]
-.. AUDIT_LOG_FORMAT=JSON
-.. AUDIT_LOG_HANDLER=FILE
+
+```ini
+  [mysqld]
+  AUDIT_LOG_FORMAT=JSON
+  AUDIT_LOG_HANDLER=FILE
+```
 
 ###Clone this repo
 
