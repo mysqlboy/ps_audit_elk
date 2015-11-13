@@ -5,7 +5,10 @@
 
 ###Prerequisites
 1. This guide assumes that you have docker or docker machine installed. Out of scope.
-2. You have generated a JSON based audit log file using Percona's Audit Plugin  
+2. You have generated a JSON based audit log file using Percona's Audit Plugin
+.. [mysqld]
+.. AUDIT_LOG_FORMAT=JSON
+.. AUDIT_LOG_HANDLER=FILE
 
 ###Clone this repo
 
@@ -16,17 +19,20 @@
 ```cd ps_audit_elk```
 ```docker build -t mysqlboy/ps_audit_elk```
 
-###Start a container using the image
+###Start a container using the image we built
 
-```docker run \
--d \
---name docker_audit \
--v $PWD/locallogs/sample_audit.log:/var/log/mysql/audit.log \
--v $PWD/config/logstash.conf:/etc/logstash/conf.d/logstash.conf \
--p 5601:5601 \
-mysqlboy/ps_audit_elk
-```
+```docker run
+-d
+--name docker_audit
+-v $PWD/locallogs/sample_audit.log:/var/log/mysql/audit.log
+-v $PWD/config/logstash.conf:/etc/logstash/conf.d/logstash.conf
+-p 5601:5601
+mysqlboy/ps_audit_elk```
+
+with `-v` we are mapping files into the container into defined paths. To use your own audit.log file replace `$PWD/locallogs/sample_audit.log` path with your own file.  
 
 ###Connect to the Kibana
 
-With ```-p 5601:5601``` we are mapping the local port to the docker port inside the container  
+When we bring up the container we are mapping the local port to the docker port inside the container. So we can point our browser at localhost.
+
+```http://127.0.0.1:5601```
