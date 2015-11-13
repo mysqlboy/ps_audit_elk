@@ -16,8 +16,13 @@
 
 ###Build the Docker image
 
-```cd ps_audit_elk```
-```docker build -t mysqlboy/ps_audit_elk```
+```shell
+  cd ps_audit_elk
+```
+
+```shell
+  docker build -t mysqlboy/ps_audit_elk
+```
 
 ###Start a container using the image we built
 
