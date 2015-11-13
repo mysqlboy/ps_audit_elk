@@ -27,8 +27,7 @@
   -v $PWD/locallogs/sample_audit.log:/var/log/mysql/audit.log
   -v $PWD/config/logstash.conf:/etc/logstash/conf.d/logstash.conf
   -p 5601:5601
-  mysqlboy/ps_audit_elk
-```
+  mysqlboy/ps_audit_elk```
 
 with `-v` we are mapping files into the container into defined paths. To use your own audit.log file replace `$PWD/locallogs/sample_audit.log` path with your own file.  
 
